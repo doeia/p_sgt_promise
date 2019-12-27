@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function a() {//一般函数
+
+        }
+
+        const fn = new Fun()//Fn是构造函数 fn是实例对象（对象）
+
+        Fn.bind({}) //Fn是函数对象
+
+        $('#test') //jQuery 函数
+        $.get('/test') //jQuery 函数对象
+
+
+        //创建一个构造函数
+        function People(name, str) {
+            this.name = name;
+            this.fun = function () {
+                console.log(str);
+            };
+            this.act = function () {
+                console.log("我是" + this.name + str);
+            };
+        }
+        //实例化一个People
+        var p1 = new People("郭小妹", "美美美");
+        var p2 = new People("东东", "吃吃吃")
+        p1.fun();
+        p1.act();
+        p2.act();
+    </script>
+</body>
+
+</html>
